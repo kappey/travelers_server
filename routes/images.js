@@ -70,7 +70,7 @@ router.get('/', async (req, res) => {
 
    /* Upload new image */
    router.post("/", authToken, async (req, res) => {
-   
+    console.log("file:", req.files?.file);
     if (req.files?.file){
         try{
             let image = new ImageModel();

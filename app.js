@@ -10,6 +10,7 @@ const fileUpload = require("express-fileupload");
 require('./dataBase/mongoConnection');
 require ('dotenv').config();
 
+
 const app = express();
 
 app.use(fileUpload({
@@ -26,7 +27,7 @@ routesInit(app);
 corsAccessControl(app);
 
 const server = http.createServer(app);
-const PORT = process.env.PORT || "3000";
+const PORT = process.env.PORT || "3001";
 server.listen(PORT);
 
 
